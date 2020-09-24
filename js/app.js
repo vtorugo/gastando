@@ -92,8 +92,8 @@ class Database {
         return filteredExpenses
     }
 
-    removeData(id) {
-        localStorage.removeItem(id)
+    removeData(id) { 
+        localStorage.removeItem(id)      
     }
 }
 
@@ -120,25 +120,30 @@ function registerExpense() {
     if(expense.validateData()) {
 
         db.storeData(expense)
-        document.getElementById('modal-label').className = "modal-header text-success"
-        document.getElementById('modal-heading').innerHTML = 'Dados gravados com successo'
-        document.getElementById('modal-text').innerHTML = 'Sua despesa foi registrada com sucesso!'
-        document.getElementById('modal-dismiss').className = 'btn btn-success'
-        document.getElementById('modal-dismiss').innerHTML = 'Ok'
 
-        $('#dialog-popup').modal('show')
+        createPopup (   
+            "modal-header text-success", 
+            "Dados gravados com successo", 
+            "Sua despesa foi registrada com sucesso!", 
+            "btn btn-success", 
+            "Ok"
+        )
 
         document.getElementById('categoria').value = ''
         document.getElementById('descricao').value = ''
         document.getElementById('valor').value = ''
 
+        $('#dialog-popup').modal('show')        
+
     } else {
 
-        document.getElementById('modal-label').className = "modal-header text-danger"
-        document.getElementById('modal-heading').innerHTML = 'Erro na gravação'
-        document.getElementById('modal-text').innerHTML = 'Existem campos obrigatórios que não foram preenchidos corretamente'
-        document.getElementById('modal-dismiss').className = 'btn btn-danger'
-        document.getElementById('modal-dismiss').innerHTML = 'Voltar e corrigir'
+        createPopup (   
+            "modal-header text-danger", 
+            "Erro na gravação", 
+            "Existem campos obrigatórios que não foram preenchidos corretamente", 
+            "btn btn-danger", 
+            "Voltar e corrigir"
+        )
 
         $('#dialog-popup').modal('show')
     }
@@ -172,8 +177,8 @@ function loadAllExpenses(expenses = [], filter = false) {
             case '5': data.category = 'Transporte'
                 break
         }
-        row.insertCell(1).innerHTML = data.category
 
+        row.insertCell(1).innerHTML = data.category
         row.insertCell(2).innerHTML = data.description
         row.insertCell(3).innerHTML = `R$ ${data.amount}`
 
@@ -186,8 +191,20 @@ function loadAllExpenses(expenses = [], filter = false) {
         btn.onclick = function() {
 
             let id = this.id.replace('expense_id_', '')
-            db.removeData(id)
-            window.location.reload()
+
+            document.getElementById('modal-label').className = "modal-header text-danger"
+            document.getElementById('modal-heading').innerHTML = "Atenção!"
+            document.getElementById('modal-text').innerHTML = "Você tem certeza que quer excluir esta despesa?"
+            document.getElementById('modal-dismiss').className = "btn btn-danger text-light"
+            document.getElementById('modal-dismiss').innerHTML = "Excluir"
+            document.getElementById('modal-dismiss').addEventListener("click", deleteExpense)
+            
+            function deleteExpense() {
+                db.removeData(id);
+                F5(); 
+            }         
+
+            $('#dialog-popup').modal('show')
         }
 
         row.insertCell(4).append(btn)
@@ -211,5 +228,17 @@ function pesquisarDespesa() {
     let expenses = db.search(expense)
 
     loadAllExpenses(expenses, true)    
-}   
+}
 
+function createPopup(labelClass, labelText, innerText, buttonClass, buttonText, id) {
+
+    document.getElementById('modal-label').className = labelClass
+    document.getElementById('modal-heading').innerHTML = labelText
+    document.getElementById('modal-text').innerHTML = innerText
+    document.getElementById('modal-dismiss').className = buttonClass
+    document.getElementById('modal-dismiss').innerHTML = buttonText;    
+}
+
+function F5() {
+    window.location.reload()
+}
