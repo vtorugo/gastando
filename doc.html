@@ -1,0 +1,317 @@
+<html>
+
+	<head>
+    <meta charset="utf-8" />
+		<title>Ga$tando - Documentação</title>
+
+		<!-- begin of Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- end of Bootstrap -->
+
+    <!-- CSS Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <script src="js/app.js"></script>
+
+	</head>
+
+  <body class="pb-5">
+
+    <!-- begin of Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+      <div class="container">
+
+        <a class="navbar-brand" href="#">
+           <img src="img/logo.png" width="55" height="50" alt="Orçamento pessoal">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="index.html">Homepage</a>
+            </li>
+          </ul> 
+
+        </div>
+      </div>
+    </nav>
+    <!-- end of Header -->
+
+    <div class="container">
+    
+      <div class="row">
+        <div class="col mb-5">
+          <h1 class="display-5 font-weight-bold text-primary text-center">Docs GA$TANDO</h1>
+          <p class="text-center">Here you can find the description to all of the functions, classes and methods used in the application.</p>
+        </div>
+      </div>
+
+      <!-- Begin of Accordion-Master -->
+      <div id="accordion">
+        <div class="card">
+          <!-- Begin of Functions Accordion -->
+          <div class="card-header bg-info" id="functions">
+              <a href="#" class="text-light font-weight-bold no-underline accordion-title" data-toggle="collapse" data-target="#functions-group" aria-expanded="false" aria-controls="functions-group">
+                <i class="fas fa-chevron-down mr-1"></i>   
+                Functions
+              </a>
+          </div>
+          
+              <div id="functions-group" class="collapse" aria-labelledby="functions" data-parent="#accordion">
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#function1" aria-expanded="false" aria-controls="functions-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    createPopup( )
+                  </a>
+                </div>
+
+                  <div id="function1" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="functions-group">
+                    <p>
+                      This function creates warning popups, essentialy, for when the user is registering and deleting expenses. It receives 5 parameters: labelClass, labelText, innerText, buttonClass and buttonText. It works through 
+                      <a href="https://www.w3schools.com/whatis/whatis_htmldom.asp"> DOM </a> getElementById method by assigning Bootstrap classes and innerHTML to the <a href="https://getbootstrap.com/docs/4.0/components/modal/"> modal </a> div on the page.
+                    </p>
+                  </div>
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#function2" aria-expanded="false" aria-controls="functions-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    loadAllExpenses( )
+                  </a>
+                </div>
+
+                  <div id="function2" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="functions-group">
+                    <p>
+                      This function loads all of the expenses registered by the user. It is triggered when the body of the page 'consulta.html' is loaded. The function receives two parameters: expenses (which is an empty array by default) and filter, a boolean that checks if the expenses on localStorage are empty (default state). The function works through JavaScript forEach( ) method so as for each index of the array 'expenses' we create a table using <a href="https://www.w3schools.com/whatis/whatis_htmldom.asp"> DOM </a> insertRow( ) and insertCell( ) methods. This function also inserts a button in each row for expense removal using append( ) method. 
+                    </p>
+                  </div>
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#function3" aria-expanded="false" aria-controls="functions-group">
+                    <i class="fas fa-chevron-down mr-1"></i>
+                    registerExpense( )
+                  </a>
+                </div>
+
+                  <div id="function3" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="functions-group">
+                    <p>
+                      This is the function responsible for registering each one of the user expenses. It works by catching form inputs through DOM getElementById( ) method and making them into an object. After that and some data validation, the function stores them in the browser local storage.
+                    </p>
+                  </div>
+
+              </div>
+          <!-- Begin of Classes Accordion -->
+          <div class="card-header bg-info" id="classes">
+            <a href="#" class="text-light font-weight-bold no-underline" data-toggle="collapse" data-target="#classes-group" aria-expanded="false" aria-controls="classes-group">
+              <i class="fas fa-chevron-down mr-1"></i>   
+              Classes
+            </a>
+          </div>
+
+              <div id="classes-group" class="collapse" aria-labelledby="classes" data-parent="#accordion">
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#class2" aria-expanded="false" aria-controls="classes-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    Database
+                  </a>
+                </div>
+
+                  <div id="class2" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="classes-group">
+                    <p>
+                      This is the model to the database of the application. It contains the id of each expense registered by the user.
+
+                      The following methods belong to this class: 
+                      <ul>
+                        <li>getNextId( )</li>
+                        <li>storeData( d )</li>
+                        <li>recoveryAllRegistry( )</li>
+                        <li>search( expense )</li>
+                        <li>removeData( id )</li>
+                      </ul>
+                    </p>
+                  </div>
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#class1" aria-expanded="false" aria-controls="classes-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    Expense
+                  </a>
+                </div>
+
+                  <div id="class1" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="classes-group">
+                    <p>
+                      This is the model in which the object 'db' is built on. It is the structure of the expenses that are registered in the application. All of the expenses registered by the user contains the following data:
+                      <ul>
+                        <li>Year</li>
+                        <li>Month</li>
+                        <li>Day</li>
+                        <li>Category</li>
+                        <li>Description</li>
+                        <li>Amount</li>
+                      </ul>
+                      The validateData( ) is a method of this class.
+                    </p>
+                  </div>
+
+              </div>
+          <!-- Begin of Methods Accordion -->
+          <div class="card-header bg-info" id="methods">
+            <a href="#" class="text-light font-weight-bold no-underline" data-toggle="collapse" data-target="#methods-group" aria-expanded="false" aria-controls="functions-group">
+              <i class="fas fa-chevron-down mr-1"></i>   
+                Methods
+            </a>
+          </div>
+
+              <div id="methods-group" class="collapse" aria-labelledby="methods" data-parent="#accordion">
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#method1" aria-expanded="false" aria-controls="classes-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    getNextId( )
+                  </a>
+                </div>
+
+                  <div id="method1" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="methods-group">
+                    <p>
+                        This method is responsible for updating the id for a new expense register.
+                        <br><br>
+                        It works by assigning localStorage.getItem( ) return into a 'let' variable and then converting it from string to an integer while adding it the value of 1, then it returns the result.
+                        <br><br>
+                        This is a method of the Database class.
+                    </p>
+                  </div>
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#method2" aria-expanded="false" aria-controls="classes-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    recoverAllRegistry( )
+                  </a>
+                </div>
+
+                  <div id="method2" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="methods-group">
+                    <p>
+                        This method is responsible to fetch all of the expenses in the local storage database.
+                        <br><br>
+                        It works creating an empty array and getting the id of all of the expenses through localStorage.getItem( ) method. Then it converts each JSON id matches to an object in a for loop structure. After that, each object is pushed to the initially created array and this array is returned.
+                        <br><br>
+                        This is a method of the Database class.
+                    </p>
+                  </div>
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#method3" aria-expanded="false" aria-controls="methods-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    removeData( id )
+                  </a>
+                </div>
+
+                  <div id="method3" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="methods-group">
+                    <p>
+                        This simples method removes the expense selected by the user.
+                        <br><br>
+                        It works through localStorage.removeItem( ) method. It receives the id of the expense in order to delete it.
+                        <br><br>
+                        This is a method of the Database class.
+                    </p>
+                  </div>
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#method4" aria-expanded="false" aria-controls="methods-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    search( expense )
+                  </a>
+                </div>
+
+                  <div id="method4" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="methods-group">
+                    <p>
+                        This method is responsible for handling the search filter selected by the user.
+                        <br><br>
+                        It works by calling recoverAllRegistry( ) method and attributing it's return into an empty array so that we can use Array.prototype.filer( ) method and compare it to the user entries in the filter using a callback function with if statements for every input (year, month, day, etc.). The method returns the filtered array called filteredExpenses.
+                        <br><br>
+                        This is a method of the Database class.
+                    </p>
+                  </div>
+                
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#method5" aria-expanded="false" aria-controls="methods-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    storeData( d )
+                  </a>
+                </div>
+
+                  <div id="method5" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="methods-group">
+                    <p>
+                        This method is called by registerExpense( ) function and it is responsible for registering the expense entered by the user into the local storage.
+                        <br><br>
+                        It works by receiving the object of the expense and calling the getNextId( ) method to assign a new id to it. After that it uses localStorage.setItem( ) method to add the id and value of the expense to the local storage. The value must be in JSON string format so we use JSON.stringify( ) to do it.
+                        <br><br>
+                        This is a method of the Database class.
+                    </p>
+                  </div>
+
+                <div class="card-header bg-light">
+                  <a href="#" class="text-dark no-underline ml-3" data-toggle="collapse" data-target="#method6" aria-expanded="false" aria-controls="methods-group">
+                    <i class="fas fa-chevron-down mr-1"></i>   
+                    validateData( )
+                  </a>
+                </div>
+
+                  <div id="method6" class="collapse mt-3 mx-5" aria-expanded="false" aria-controls="methods-group">
+                    <p>
+                        This method is called by registerExpense( ) function and it makes sure that none of the inputs entered by the user when registering a new expense is empty.
+                        <br><br>
+                        It works through a for...in loop using all of the objects properties (i.e. year, month...)
+                        <br><br>
+                        This is a method of the Expense class.
+                    </p>
+                  </div>
+
+              </div>
+        </div>
+
+    </div>
+
+    <!-- Modal (Popup) -->
+    <div class="modal fade" id="dialog-popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div id="modal-label">
+            <h5 class="modal-title" id="modal-heading">
+              <!--Filled by JS-->Sample Text
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body" id="modal-text">
+            <!--Filled by JS-->Sample Text
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" id="modal-dismiss">
+              <!--Filled by JS-->Sample Text
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>	
+  
+</html>

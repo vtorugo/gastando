@@ -63,6 +63,8 @@ git clone https://github.com/vtorugo/gastando
 # Registrar suas despesas
 
 # Consultar ou Remover suas despesas
+
+#P.S: for additional information, check doc.html file.
 ```
 
 ---

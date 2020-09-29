@@ -66,7 +66,6 @@ class Database {
     search(expense) {
         let filteredExpenses = []
         filteredExpenses = this.recoverAllRegistry()
-
        
         console.log(expense)
         console.log(filteredExpenses)
@@ -153,7 +152,6 @@ function loadAllExpenses(expenses = [], filter = false) {
 
     if(expenses.length == 0 && filter == false) {
         expenses = db.recoverAllRegistry()
-
     }
 
     let expensesList = document.getElementById('expenses-list')
@@ -208,13 +206,11 @@ function loadAllExpenses(expenses = [], filter = false) {
         }
 
         row.insertCell(4).append(btn)
-
-        console.log(data)
         
     })    
 }
 
-function pesquisarDespesa() {
+function searchExpense() {
     
     let year = document.getElementById('ano').value
     let month = document.getElementById('mes').value
@@ -230,7 +226,7 @@ function pesquisarDespesa() {
     loadAllExpenses(expenses, true)    
 }
 
-function createPopup(labelClass, labelText, innerText, buttonClass, buttonText, id) {
+function createPopup(labelClass, labelText, innerText, buttonClass, buttonText) {
 
     document.getElementById('modal-label').className = labelClass
     document.getElementById('modal-heading').innerHTML = labelText

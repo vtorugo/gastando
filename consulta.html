@@ -1,4 +1,5 @@
-<html>  
+<html>
+    
 	<head>
     <meta charset="utf-8"/>
 		<title>Con$ulta - Home</title>
@@ -24,10 +25,8 @@
       <div class="container">
 
         <a class="navbar-brand" href="#">
-           <img src="img/logo.png" width="50" height="35" alt="Orçamento pessoal">
+           <img src="img/logo.png" width="55" height="50" alt="Orçamento pessoal">
         </a>
-
-        <h3 class="navbar-brand mt-2">ga$tando</h3>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,7 +40,7 @@
             </li>
 
             <li class="nav-item active">
-              <a class="nav-link" href="consulta.html">Consulta</a>
+              <a class="nav-link font-weight-bold" href="consulta.html">Consulta</a>
             </li>
           </ul>
           
@@ -53,7 +52,7 @@
 
       <div class="row mb-5">
         <div class="col">
-          <h1 class="display-4">Consulta de despesas</h1>
+          <h1 class="display-4 font-weight-normal text-primary">Consulta de despesas</h1>
         </div>
       </div>
 
@@ -148,7 +147,7 @@
         </div>
 
         <div class="col-md-2 d-flex justify-content-start">
-          <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">Pesquisar
+          <button type="button" class="btn btn-primary" onclick="searchExpense()">Pesquisar
             <i class="fas fa-search"></i>
           </button>
         </div>
@@ -177,7 +176,7 @@
 
       <!-- Modal (Popup) -->
       <div class="modal fade" id="dialog-popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
 
             <div id="modal-label">
