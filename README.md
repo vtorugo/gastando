@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/logo-alt.png" width="150" alt="Ga$tando">
+  <img src="img/logo.png" width="150" alt="Ga$tando">
 </p>
 
 ## 📋 Índice
