@@ -32,7 +32,7 @@ Meu objetivo com este spin-off é, além de colocar em prática os conhecimentos
 
 ## 🚀 Tecnologias utilizadas
 
-O projeto está desenvolvido utilizando as seguintes tecnologias:
+O projeto está sendo desenvolvido com as seguintes tecnologias:
 
 <span>
   <img src="https://ik.imagekit.io/xksv/html5_RcOQBX1jU9.png" width="100" alt="HTML">
