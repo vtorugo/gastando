@@ -67,4 +67,4 @@ git clone https://github.com/vtorugo/gastando
 
 ---
 
-Desenvolvido com amor e raiva por Victor Hugo
+Não meça os outros com sua própria régua.
