@@ -2,15 +2,6 @@
   <img src="img/logo-alt.png" width="150" alt="Ga$tando">
 </p>
 
-## 📋 Índice
-
-- [Sobre](#-Sobre)
-- [Tecnologias utilizadas](#-Tecnologias-utilizadas)
-- [Como executar o projeto](#-Como-executar-o-projeto)
-- [Preview](#-Preview)
-
----
-
 ## 🖥 Preview 
 
 <p align="center">
@@ -20,19 +11,15 @@
 
 ---
 
-## 📖 Sobre 
+## 📖 About
 
-Este é um spin-off de um projeto desenvolvido durante o curso Desenvolvimento Web Completo, criado pelo Jorge Sant Ana e Jamilton Damasceno e disponibilizado na Udemy.
-
-A proposta original do projeto é uma aplicação que permita ao usuário registrar as suas despesas e armazená-las no localStorage do navegador. O usuário também poderá, eventualmente, consultar e/ou remover suas despesas
-
-Meu objetivo com este spin-off é, além de colocar em prática os conhecimentos adquiridos na aula do curso, implementar novas features para a aplicação e publicá-las no GitHub como forma de evoluir meu código e compartilhá-lo.
+An application that allows the user to register his expenses and store them in the browser's localStorage. The user can eventually consult and/or remove his expenses.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## 🚀 What i've used
 
-O projeto está sendo desenvolvido com as seguintes tecnologias:
+This project is developed with:
 
 <span>
   <img src="https://ik.imagekit.io/xksv/html5_RcOQBX1jU9.png" width="100" alt="HTML">
@@ -52,17 +39,14 @@ O projeto está sendo desenvolvido com as seguintes tecnologias:
 
 ---
 
-## ⌨ Como executar o projeto
+## ⌨ How to run it
 
 ```bash
-# Clonar o repositório
+# Clone the repo
 git clone https://github.com/vtorugo/gastando
 
-# Executar o index.html contido no diretório
+# Run the index.html file inside the folder
 
-# Registrar suas despesas
-
-# Consultar ou Remover suas despesas
 ```
 
 ---
